@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const youtubers = [
   {
     id: 1,
@@ -33,7 +35,9 @@ function App() {
         {youtubers.map((youtuber) => {
           return (
             <li>
-              <h2>{youtuber.name}</h2>
+              <Link to={`/c/${youtuber.username}`}>
+                <h2>{youtuber.name}</h2>
+              </Link>
             </li>
           );
         })}
